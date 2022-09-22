@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login/dropdow.dart';
+import 'package:login/model/model.dart';
 import 'package:login/text_input.dart';
 
 class InputDecorationI extends StatelessWidget {
@@ -18,8 +19,16 @@ class InputDecorationI extends StatelessWidget {
     'Watermelon',
   ];
 
+  final List<GetUsers> usuarios = [];
+
+  GetUsers user2 = GetUsers(name: "joseee2", userId: 2);
+  GetUsers user1 = GetUsers(name: "jose1", userId: 1);
+
   String _selectedFruit = "Apple";
   Widget build(BuildContext context) {
+    usuarios.add(user1);
+    usuarios.add(user2);
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -46,9 +55,10 @@ class InputDecorationI extends StatelessWidget {
             ),
             const SizedBox(height: 50),
             DropDown(
-                list: ["jhjhjhjjhj", "eee"],
+                name: "UserID",
+                list: usuarios,
                 labelText: "rr",
-                onItemSeleccionado: (opcionEscogida) {
+                onItemSelection: (opcionEscogida) {
                   print("${opcionEscogida}");
                 }),
           ],
