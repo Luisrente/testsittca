@@ -18,22 +18,24 @@ class InputText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 320,
       child: Center(
           child: TextField(
         decoration: InputDecoration(
-          disabledBorder: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(5.0)),
-              borderSide: BorderSide(color: Colors.black)),
-          border: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(5.0)),
-              borderSide: BorderSide(color: Colors.black)),
-          floatingLabelBehavior: FloatingLabelBehavior.always,
-          labelText: labelText,
-          hintText: hintText,
-          fillColor: Color.fromARGB(255, 7, 7, 7),
-        ),
+            disabledBorder: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                borderSide: BorderSide(color: Colors.black)),
+            border: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                borderSide: BorderSide(color: Colors.black)),
+            floatingLabelBehavior: FloatingLabelBehavior.always,
+            labelText: labelText,
+            labelStyle: const TextStyle(color: Colors.black),
+            hintText: hintText,
+            fillColor: const Color.fromARGB(255, 7, 7, 7),
+            focusedBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.black))),
       )),
     );
   }

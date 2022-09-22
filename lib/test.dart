@@ -36,7 +36,6 @@ class InputDecorationI extends StatelessWidget {
             SizedBox(
               height: 200,
             ),
-
             Center(
               child: InputText(
                 placeholder: "jjjj",
@@ -46,38 +45,12 @@ class InputDecorationI extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 50),
-
             DropDown(
-              list: ["jhjhjhjjhj", "eee"],
-              labelText: "rr",
-            ),
-
-            // Container(
-            //   width: 320,
-            //   child: InputDecorator(
-            //     decoration: InputDecoration(
-            //       labelText: 'Fruit',
-            //       // labelStyle: Theme.of(context).primaryTextTheme.caption.copyWith(color: Colors.black),
-            //       border: const OutlineInputBorder(),
-            //     ),
-            //     child: DropdownButtonHideUnderline(
-            //       child: DropdownButton(
-            //         isExpanded: true,
-            //         isDense: true, // Reduces the dropdowns height by +/- 50%
-            //         icon: Icon(Icons.keyboard_arrow_down),
-            //         value: _selectedFruit,
-            //         items: _fruits.map((item) {
-            //           return DropdownMenuItem(
-            //             value: item,
-            //             child: Text(item),
-            //           );
-            //         }).toList(),
-            //         onChanged: ((value) {}),
-            //         // onChanged: (selectedItem) => setState(() => _selectedFruit = selectedItem,
-            //       ),
-            //     ),
-            //   ),
-            // )
+                list: ["jhjhjhjjhj", "eee"],
+                labelText: "rr",
+                onItemSeleccionado: (opcionEscogida) {
+                  print("${opcionEscogida}");
+                }),
           ],
         ),
       ),
